@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.get("/get", productController.get_products);
 
-router.get("get/:id", productController.get_product);
+router.get("/get/:id", productController.get_product);
 
 router.put("/update/:id", productController.update_product);
 
