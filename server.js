@@ -1,7 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
+require("dotenv").config();
 const app = express();
-const productRouter = require("./routes/productRouter");
+const productRouter = require("./src/routes/productRouter");
 const cors = require("cors");
 
 app.use(express.json());
@@ -29,7 +30,7 @@ app.use(function (req, res, next) {
 
 const config = {
   port: 2000,
-  uri: "mongodb+srv://sabakhara44:test1234@cluster0.qg2jqeq.mongodb.net/Node-API?retryWrites=true&w=majority&appName=Cluster0",
+  uri: process.env.MONGO_URI,
 };
 
 app.get("/", (req, res) => {
