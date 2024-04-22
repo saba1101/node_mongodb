@@ -29,7 +29,7 @@ app.use(function (req, res, next) {
 });
 
 const config = {
-  port: 2000,
+  port: process.env.PORT,
   uri: process.env.MONGO_URI,
 };
 
